@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+	<!--<base href="/htdocs/">-->
+  	<meta charset="utf-8">
+  	<title>蓝宇</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="mobile-web-app-capable" content="yes">
+  	<meta name="theme-color" content="#544B9E">
+	  <!--[if lt IE 9]>
+	  　　 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.
+　　  js"></script>
+	  <![endif]-->
+  	<link rel='alternate' type='application/rss+xml' title='RSS' href='/rss'>
+
+  	
+  	<!-- build:css css/build.css  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/list.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/add.css">
+	  <link rel="stylesheet" href="css/styles.css">
+	<!-- /build -->
+	<style id="css-inline"> </style>
+	
+<style>
+	.hed2 {
+		display:none;
+	}
+
+	@media screen and (max-width: 480px){
+		.custom-header ul li {
+			float: left;
+
+		}
+		.hed {
+			display: none;
+		}
+		.hed2  {
+			display:block;
+
+		}
+		.hed2 ul li a {
+
+			font-size: 20px;
+			padding: 3px;
+		}
+		.listTitle{
+			font-size: 18px;
+		}
+		.listContext{
+			font-size: 13px;
+		}
+
+
+	}
+</style>
+	
+  </head>
+  <body>  	
+
+	<header class="custom-header">
+				<div class="hed container">
+					<ul>
+						<li class="brand"> <a href="."><span class="nav-text"> Hybrid App Framework </span> &nbsp;</a> </li>
+						<!--<li> <a href="#" id="nav-s" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search"></i> <span class="nav-text">查找</span> </a> </li>-->
+
+						<li> <a href="http://www.360lzy.com/html/"  target="_blank"><i class="fa fa-share"></i> <span class="nav-text">公司介绍</span> </a> </li>
+						<li> <a href="http://www.360lzy.com/sms/s"  target="_blank"><i class="fa fa-share"></i> <span class="nav-text">荣成商圈</span> </a> </li>
+						<li> <a href="http://www.360lzy.com/myshow"  target="_blank"><i class="fa fa-share"></i> <span class="nav-text">博客</span> </a> </li>
+						<li> <a href="http://www.haoweihai.cn"  target="_blank"><i class="fa fa-share"></i> <span class="nav-text">商城案例</span> </a> </li>
+						<li> <a ui-sref="home" href=""><i class="fa fa-download"></i> <span class="nav-text">angularjs案例</span> </a> </li>
+						<li> <a ui-sref="docs" href=""><i class="fa fa-book"></i> <span class="nav-text">文档</span> </a></li>
+						<li> <a ui-sref="home" href=""><i class="fa fa-home"></i> <span class="nav-text">首页</span> </a></li>
+					</ul>
+				</div>
+		<div class="hed2 container" >
+
+			<ul>
+				<li class="brand"> <a href=".">Hybrid App Framewor</a></li>
+
+				<li> <a ui-sref="home" href="">首页</a></li>
+				<li> <a ui-sref="docs" href="">文档</a></li>
+				<li> <a ui-sref="home" href="">angularjs案例</a> </li>
+				<li> <a href="http://www.haoweihai.cn"  target="_blank"> 商城案例 </a> </li>
+				<li> <a href="http://www.360lzy.com/myshow"  target="_blank">博客 </a> </li>
+				<li> <a href="http://www.360lzy.com/sms/s"  target="_blank">荣成商圈</a> </li>
+				<li> <a href="http://www.360lzy.com/html/"  target="_blank"> 公司介绍 </a> </li>
+
+
+
+
+
+
+			</ul>
+		</div>
+	</header>
+
+
+		<!--<div ng-include="'html/search.html'"></div>-->
+
+		<div ui-view class="container slide" style="padding-top: 80px;"></div>
+		<div class="push"></div>
+
+
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted credit" >
+        	Angular POC by <a href="http://www.360lzy.com" target="_blank" itemprop="url" title="My personal website">&nbsp;蓝宇web&nbsp;</a>
+        </p>
+      </div>
+    </div>
+    <div id="loader" class="loader"></div>
+	<!-- build:js js/build.js -->
+    <script src="js/libs/requirejs/require.js" data-main="js/main" type="text/javascript"></script>
+    <!-- /build -->
+
+  </body>
+</html>

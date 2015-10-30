@@ -1,0 +1,39 @@
+<div class="container">
+
+				<!-- <span id="fake-content">
+					<div ng-include="'html/list_fake.html'"></div>
+				</span> -->
+
+
+
+
+					<a  ng-repeat="entry in items"
+						 class="listBlock ">
+
+
+							<div data-img="{{entry.imgurl }}" class="imgNotLoading imgBg">
+								<!--<meta itemprop="image" content="{{entry.imgurl}}">-->
+							</div>
+
+
+
+								<span itemprop="name" class="listTitle">
+
+									{{entry.title }}
+
+
+								</span>
+						<span itemprop="name" class="listContext">
+						{{entry.context}}
+						</span>
+
+
+
+
+
+					</a>
+
+
+</div>
+
+

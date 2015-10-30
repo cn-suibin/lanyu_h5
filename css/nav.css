@@ -1,0 +1,152 @@
+
+
+.navbar-default {
+background-color: transparent;
+border-color: transparent;
+}
+
+.navbar-default .navbar-brand{
+	margin-left: 0;
+padding-top: 0px;
+padding-bottom: 10px;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-nav>li>a:focus {
+	color: #fff;
+	text-shadow: 0 1px 1px black;
+	font-size: 20px;
+}
+
+
+.custom-header{
+
+	  position: fixed;
+	  z-index: 1000;
+	  padding-top: 10px;
+	  border: 1px solid transparent;
+	  padding-bottom: 10px;
+	  width: 100%;
+	  background: rgba(0, 0, 0, 0);
+	  -webkit-transition: .6s;
+	  transition: .6s;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+
+}
+
+.navScrolled .custom-header{
+	background: #544B9E;
+	  box-shadow: 0 0 1em white;
+}
+
+.navScrolled.downscroll .custom-header{
+	-webkit-transform: translateY(-54px);
+	transform: translateY(-54px);
+}
+
+.custom-header .container{
+	padding: 0;
+}
+
+.custom-header ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.custom-header ul li {
+	float: right;
+	position: relative;
+	display: block;
+}
+
+.custom-header ul li.brand {
+	float: left;
+}
+
+
+
+
+.custom-header ul li.brand i {
+	font-size: 2em;
+	line-height: 20px;
+}
+.custom-header ul li a{
+	color: #fff;
+	opacity: .6;
+	text-shadow: 0 1px 1px black;
+	font-size: 20px;
+	padding: 16px;
+	text-decoration: none;
+	transition: .3s ease-out;
+}
+
+.custom-header ul li a:hover,.custom-header ul li a:active,
+.custom-header ul li a:focus {
+	opacity: 1;
+}
+
+.custom-header ul li.brand a{
+	padding-left: 10px;
+	opacity: 1;
+}
+
+
+/* search */
+
+
+
+.cse .gsc-control-cse, .gsc-control-cse {
+	background-color: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+}
+
+form.gsc-search-box {
+	font-size: 13px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0 !important;
+	margin-left: 0;
+	width: 100%;
+}
+
+
+.gsc-selected-option-container{
+	width: auto !important;
+	max-width: none !important;
+}
+.container{
+	text-align: center;
+	width: initial;
+}
+.gsc-orderby-container, .gcsc-branding-text-name{
+display: none;
+}
+
+.gcsc-branding-text {
+white-space: nowrap;
+}
+
+.gsc-wrapper{
+
+background: white;
+}
+
+[name='search']{
+	background: white !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	padding-left: 5px !important;
+}
+
+.gsib_a {
+	padding:0 !important;
+}
+
+#searchModal{
+	padding-top: 53px;
+}

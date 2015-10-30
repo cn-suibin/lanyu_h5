@@ -1,0 +1,471 @@
+html, body{
+	position: relative;
+	min-height: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased; 
+}
+
+
+body{
+	background-color: #3374de;
+	/*background-image : url('../img/desk1600.jpg');*/ /*http://startupstockphotos.com/post/94180097361/download#notes*/
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;	
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+img{
+	max-width: 100%;
+}
+
+.io{
+	text-indent: -1.35em;
+	display: inline-block;
+	font-size: .6em;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	position: relative;
+  min-height: 100%;
+  height: auto;
+  	margin: 0 auto -32px; /* the bottom margin is the negative value of the footer's height */
+
+}
+
+.page{
+	z-index: 2;
+	padding-top: 53px;
+}
+
+.page .row > div, .page .container{
+	/*padding: 0;*/
+}
+
+
+
+/* Set the fixed height of the footer here */
+#footer {
+  background-color: black;
+  position: relative;
+width: 100%;
+}
+
+#footer .text-muted {
+	color: #aaa;
+}
+
+#footer i{
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+
+#footer iframe{
+	vertical-align: middle;
+}
+
+#footer a{
+	color : #fff;
+}
+
+#footer, .push {
+height: 32px;
+}
+
+h1.title {
+margin-top: 0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+
+#wrap > .container {
+  padding: 0px 15px 0;
+}
+.container .credit {
+  margin: 5px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+blockquote{
+	background: #fff;
+}
+
+*{
+	white-space: normal !important;
+	word-break: break-word;
+}
+
+
+#top{
+	float: right;
+}
+
+
+/*
+.listBlock .listBigTitle{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	color: white;
+	margin: 0;
+	font-weight: normal;
+	text-align: left;
+	z-index: 1;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	transition : .3s;
+	box-shadow: 2em 0em .2em transparent, 0 2em .2em transparent, -2em 0 .2em transparent, 0 -2em .2em transparent;
+
+}
+
+.listBlock:hover .listBigTitle, .listBlock:focus .listBigTitle{
+	
+transition: .3s;
+box-shadow: .5em 0 1em white, 0 .5em 1em white, -.5em 0 1em white, 0 -.5em 1em white;
+}
+
+.listBigTitle img{
+	  height: 28px;
+  vertical-align: top;
+}
+
+.listBlock .listTitle{
+	display: inline;
+	  font-size: 1.5em;
+	  font-weight: bold;
+	  padding: 5px 5px 0 5px;
+}
+
+.listBlock .listDate {
+	text-align: right;
+	display: block;
+}
+
+.listBlock .listDate span {
+	padding: 0px 5px;
+}
+
+.listBlock .dayMoment{
+	font-weight: bold;
+}
+
+
+.listBlock .listWhere{
+	position: absolute;
+	  bottom: 0;
+	  text-align: right;
+	  right: 0;
+	  display: inline;
+	  padding: 5px;
+
+}
+
+.listBlock .listTitle, .listBlock .listWhere, .listBlock .listDate span{
+	  background: rgba(0, 0, 0, 0.63);
+}
+*/
+
+
+.title{
+	color: white;
+	position: relative;
+	padding: 5px 15px;
+	font-family: 'Helvetica Neue Thin', 'HelveticaNeue-Thin', 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
+	display: inline-block;
+	text-shadow: 0 2px 1px black;
+	
+}
+
+.title.brand{
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 0;
+
+}
+
+
+.title a.btn {
+	text-shadow: none;
+}
+
+.title iframe{
+	vertical-align: bottom;
+}
+
+
+.animate-enter {
+  -webkit-animation: enter_sequence 1s linear; /* Safari/Chrome */
+  -moz-animation: enter_sequence 1s linear; /* Firefox */
+  -o-animation: enter_sequence 1s linear; /* Opera */
+  animation: enter_sequence 1s linear; /* IE10+ and Future Browsers */
+}
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-moz-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-o-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.animate-enter {
+ -webkit-transition: 1s linear all; /* Safari/Chrome */
+ -moz-transition: 1s linear all; /* Firefox */
+ -o-transition: 1s linear all; /* Opera */
+ transition: 1s linear all; /* IE10+ and Future Browsers */
+
+ /* The animation preparation code */
+ opacity: 0;
+}
+
+/*
+ Keep in mind that you want to combine both CSS
+ classes together to avoid any CSS-specificity
+ conflicts
+*/
+.animate-enter.animate-enter-active {
+ /* The animation code itself */
+ opacity: 1;
+}
+
+
+
+
+.loader {
+  	width: 150px;
+height: 150px;
+line-height: 150px;
+margin-left: -75px;
+box-sizing: border-box;
+text-align: center;
+text-transform: uppercase;
+position: absolute;
+top: 0px;
+left: 50%;
+border-radius: 85px;
+color: white;
+z-index: 500;
+display: none;
+}
+
+.loader:before,
+.loader:after {
+  opacity: 0;
+  box-sizing: border-box;
+  content: "\0020";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 50px #fff, inset 0 0 50px #fff;
+}
+
+.loader:after {
+  z-index: 1;
+  -webkit-animation: gogoloader 2s infinite 1s;
+}
+
+.loader:before {
+  z-index: 2;
+  -webkit-animation: gogoloader 2s infinite;
+}
+
+@-webkit-keyframes gogoloader {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1200px){
+
+	.listBlock:first-child{
+		width: 1120px;
+		height: 300px;
+	}
+	
+	.listBlock:first-child .imgBg {
+  		height: 245px;
+ 	}
+	
+	 .listBlock:nth-child(6), .listBlock:nth-child(7), .listBlock:nth-child(8), .listBlock:nth-child(9){
+		width: 550px;
+	}
+	
+	.thankyoubutton {
+		margin-top: 3em;
+	}
+	
+	.thankyou .iconthankyou{
+		font-size: 6em;
+		display: inline-block;
+	}
+}
+
+
+@media screen and (max-width: 480px){
+
+	
+	.custom-header .nav-text{
+		display: none;
+	}
+	
+	.eventTitle .title{
+		font-size : 24px;
+		width: 230px;
+		padding-right: 0;
+	}
+	
+	.row .col-md-12{
+		padding: 0;
+	}
+	.listBlock:first-child{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	a.listBlock{
+		
+		width: 100%;
+		margin-left: 0;
+  		margin-right: 0;
+		
+	}
+}
+
+#newsletter{
+	background: rgba(0, 0, 0, 0.6);
+	  width: 265px;
+  height: 250px;
+}
+
+
+#mc-embedded-subscribe {
+	font-style: italic;
+	font-weight: bold;
+	color: #f9b248;
+	border: 1px solid #f9b248;
+	background: none;
+}
+
+
+#mc-embedded-subscribe:hover, #mc-embedded-subscribe:focus, #mc-embedded-subscribe:active {
+	background: #f9b248;
+	color: black;
+}
+
+#followus {
+	position: absolute;
+	top: 50px;
+	opacity: 1;
+	z-index: 5;
+	left: 0;
+	width: 100%;
+	padding: 0 15px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	color: white;
+	text-align: center;
+}
+
+#followus a, #followus a:hover, #followus a:focus{
+	color : white;
+}
+
+#followus a.socialBtn{
+	display: inline-block;
+	border-radius: 10em;
+  background: #5BC8ED;
+  color: #fff;
+  height: 64px;
+  width: 64px;
+  font-size: 48px;
+  line-height: 48px;
+    margin: 0 auto;
+      margin-right: 10px;
+}
+
+#followus a.socialBtn:hover,#followus a.socialBtn:active, #followus a.socialBtn:focus {
+  background: #fff;
+  color: #5BC8ED;
+}
+
+.twitterGrp{
+	  display: inline-block;
+  vertical-align: top;
+  width: 64px;
+    margin-right: 10px;
+}
+
+#followus a.facebook{
+  background: #46629E;
+  color: #fff;
+}
+#followus a.facebook:hover,#followus a.facebook:active, #followus a.facebook:focus {
+  background: #fff;
+  color: #46629E;
+}
+
+#followus a.rss{
+	background: #FF6600;
+}
+
+#followus a.rss:hover,#followus a.rss:active, #followus a.rss:focus {
+  background: #fff;
+  color: #FF6600;
+}
+
+
+
+#followus a.gplus {
+  background: #C84F3A;
+}
+
+#followus a.gplus:hover {
+  color: #C84F3A;
+}
+
+
+#followus a.github {
+  background: #aaa;
+}
+
+#followus a.github:hover {
+  color: #aaa;
+}
