@@ -4,31 +4,28 @@ require.config({
 
     paths: {
 
-        jquery: 'libs/jquery/dist/jquery.min',
-        jqueryui: 'libs/jquery-ui/ui/minified/jquery-ui.min',
-        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',
-        async: 'libs/requirejs-plugins/src/async',
-        goog: 'libs/requirejs-plugins/src/goog',
-        angular : 'libs/angular-1.2.14/angular',
-		angularuiroute:'libs/angular-1.2.14/angular-ui-router',
-		angularanimate : 'libs/angular-1.2.14/angular-animate',
+        //jquery: 'libs/jquery/dist/jquery.min',
+       // jqueryui: 'libs/jquery-ui/ui/minified/jquery-ui.min',
+        //bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',
+        //async: 'libs/requirejs-plugins/src/async',
+        //goog: 'libs/requirejs-plugins/src/goog',
+        angular : 'libs/angular-1.4.7/angular.min',
+		angularuiroute:'libs/angular-1.4.7/angular-ui-router',
+		angularanimate : 'libs/angular-1.4.7/angular-animate',
         moment : 'libs/moment/moment',
         momentfr : 'libs/moment/locale/fr',
-        uibootstrap: 'libs/angular-bootstrap/ui-bootstrap.min'
+        uibootstrap: 'libs/angular-bootstrap/ui-bootstrap-tpls-0.14.3'
     },
   shim: {
-    'jquery': {'exports' : 'jquery'},
+   // 'jquery': {'exports' : 'jquery'},
     'angular' : {'exports' : 'angular'},
     'angularuiroute': ['angular'],
     'angularanimate': ['angular'],
     'uibootstrap': ['angular'],
-    'jqueryui': { deps:['jquery']},
-    'bootstrap': { deps:['jquery']},
+    //'jqueryui': { deps:['jquery']},
+    //'bootstrap': { deps:['jquery']},
     'momentfr': { deps:['moment']}
-  },
-	priority: [
-		"angular"
-	]
+  }
 });
 /*
 require(['angular', 'project'], function (angular,app) {
@@ -39,13 +36,14 @@ require([
 	'angular',
 	'angularuiroute',
 	'angularanimate',
+	'uibootstrap',
 	'app',
 	//'routes',
 	//'controllers',
 	//'filters',
 	'services',
 	'utils',
-	'bootstrap',
+	//'bootstrap',
 	'moment',
 
 ], function(angular, app,moment) {

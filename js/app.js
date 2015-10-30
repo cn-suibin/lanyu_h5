@@ -1,7 +1,7 @@
-define("app", ["angular",'angularuiroute','angularanimate'], function(angular) {
-    var app = angular.module("app", [ 'ui.router','ngAnimate']);
+define("app", ["angular"], function(angular) {
+    var app = angular.module("app", ['ui.router','ngAnimate','ui.bootstrap']);
     app.run(
-        [          '$rootScope', '$state', '$stateParams',
+        ['$rootScope', '$state', '$stateParams',
             function ($rootScope,   $state,   $stateParams) {
 
                 // It's very handy to add references to $state and $stateParams to the $rootScope
@@ -31,12 +31,29 @@ define("app", ["angular",'angularuiroute','angularanimate'], function(angular) {
                 url: "/docs",
                 templateUrl: "html/add.html",
                 controller: 'DocsController'
+          })
+            .state('anli',{
+                url: "/anli",
+                //templateUrl: "html/add.html",
+                controller: 'AnliController'
           });
     }]);
-    app.controller(
-        'ListController', ['$scope', '$location', '$http', '$sce', 'Page', '$timeout','viewSlideIndex', 'package','lang',
-            function($scope, $location, $http, $sce, Page, $timeout, viewSlideIndex, package, lang) {
+    
+    
+app.controller('home.modal', ['$modalInstance','$timeout', function($uibModalInstance,$timeout) {
+  $timeout(function(){
+  	 $uibModalInstance.dismiss('cancel');
+  }, 5000);
+ 
+  
+}]);
+    
+app.controller(
+        'ListController',function($scope,$log,$uibModal) {
 
+				
+
+ 				$log.info('Modal dismissed at: 77777777' + new Date());
                 var arr=new Array();
                 arr.push({'imgurl':'http://www.guimobile.net/blog/uploads/2012/04/104222211.jpg','title':'蓝宇ionic+requirejs＋cordova','context':'这是一个为了快捷开发的高性能Hybrid App前端框架,跨平台支持android、ios、windows、linux等，丰富的案例源码。'});
                 arr.push({'imgurl':'http://static.open-open.com/news/uploadImg/20151016/20151016094816_154.jpg','title':'ionic框架','context':'国外优秀的hybrid app框架，提供编译、angularjs编程、丰富的UI组件'});
@@ -73,7 +90,7 @@ define("app", ["angular",'angularuiroute','angularanimate'], function(angular) {
 
 
 
-            }]
+            }
     );
 
 
@@ -87,7 +104,26 @@ define("app", ["angular",'angularuiroute','angularanimate'], function(angular) {
 
             }]
     );
+    app.controller('AnliController',
+            function ($scope,$uibModal){
+                //scrollTop();
+				    var modalInstance = $uibModal.open({
+				      animation: true,
+				      templateUrl: 'myModalContent.html',
+				      controller: 'home.modal as vm',
+				      size: 'sm',
+				      resolve: {
+				        items: function () {
+				          return $scope.items;
+				        }
+				      }
+				    });
 
+
+
+
+            }
+    );
     return app;
  });
 function getLangWords(lang, $scope) {
