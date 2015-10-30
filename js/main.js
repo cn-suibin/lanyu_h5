@@ -11,7 +11,7 @@ require.config({
         //goog: 'libs/requirejs-plugins/src/goog',
         angular : 'libs/angular-1.4.7/angular.min',
 		angularuiroute:'libs/angular-1.4.7/angular-ui-router',
-		angularanimate : 'libs/angular-1.4.7/angular-animate',
+		angularanimate : 'libs/angular-1.4.7/angular-animate.min',
         moment : 'libs/moment/moment',
         momentfr : 'libs/moment/locale/fr',
         uibootstrap: 'libs/angular-bootstrap/ui-bootstrap-tpls-0.14.3'
