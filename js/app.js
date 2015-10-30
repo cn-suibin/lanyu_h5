@@ -14,11 +14,19 @@ define("app", ["angular"], function(angular) {
         ]
     );
     app.config(
-        [          '$stateProvider', '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
+        [          '$stateProvider', '$urlRouterProvider','$httpProvider',
+        function($stateProvider, $urlRouterProvider,$httpProvider) {
         //$locationProvider.html5Mode(true);
         //$routeProvider.when('/', {controller:'ListController', templateUrl:'html/list.html'}).when('/a', {controller:'AddController', templateUrl:'html/add.html'}).otherwise({redirectTo:'/'});
-
+   // Initialize get if not there
+	   if (!$httpProvider.defaults.headers.get) {
+	       $httpProvider.defaults.headers.get = {};
+	   }
+	   // Enables Request.IsAjaxRequest() in ASP.NET MVC
+	   $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+	   // Disable IE ajax request caching
+	   $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
+	   $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
         $urlRouterProvider.otherwise("/");
         $stateProvider
             .state('home',{
@@ -56,7 +64,7 @@ app.controller(
  				$log.info('Modal dismissed at: 77777777' + new Date());
                 var arr=new Array();
                 arr.push({'imgurl':'http://www.guimobile.net/blog/uploads/2012/04/104222211.jpg','title':'蓝宇ionic+requirejs＋cordova','context':'这是一个为了快捷开发的高性能Hybrid App前端框架,跨平台支持android、ios、windows、linux等，丰富的案例源码。'});
-                arr.push({'imgurl':'http://www.myexception.cn/img/2013/12/26/095639130.jpg','title':'ionic框架','context':'国外优秀的hybrid app框架，提供编译、angularjs编程、丰富的UI组件'});
+                arr.push({'imgurl':'http://www.ionic.wang/statics/index/images/top_right.png','title':'ionic框架','context':'国外优秀的hybrid app框架，提供编译、angularjs编程、丰富的UI组件'});
                 arr.push({'imgurl':'http://images.csdn.net/20141212/548809ed379e4.jpg','title':'angularjs','context':'国外一个优秀的js mvc框架，jquery大都数仅仅用于展现，而angularjs可以做一个完整的web应用'});
                 arr.push({'imgurl':'http://images.cnitblog.com/blog/595984/201401/05214706-9c29aad04efe428cb8f95920a26d3548.jpg','title':'requirejs','context':'国外优秀的JS按需加载插件，用于解决大型项目中SPA性能不够'});
                 arr.push({'imgurl':'http://files.colabug.com/forum/201405/12/100836gyn6h1652vmvmpnz.jpg','title':'cordova','context':'混合app中负责调用手机硬件的组件库，如：相机、蓝牙、二维码'});
