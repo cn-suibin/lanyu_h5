@@ -42,24 +42,24 @@ define("app", ["angular"], function(angular) {
           })
             .state('anli',{
                 url: "/anli",
-                //templateUrl: "html/add.html",
+                templateUrl: "html/anli.html",
                 controller: 'AnliController'
           });
     }]);
-    
-    
+
+
 app.controller('home.modal', ['$modalInstance','$timeout', function($uibModalInstance,$timeout) {
   $timeout(function(){
   	 $uibModalInstance.dismiss('cancel');
-  }, 5000);
- 
-  
+  }, 3000);
+
+
 }]);
-    
+
 app.controller(
         'ListController',function($scope,$log,$uibModal) {
 
-				
+
 
  				$log.info('Modal dismissed at: 77777777' + new Date());
                 var arr=new Array();
