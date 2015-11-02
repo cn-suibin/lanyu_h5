@@ -5,9 +5,7 @@ html, body{
 	-webkit-font-smoothing: antialiased;
 }
 
-h2{
-	color: white;
-}
+
 body{
 	background-color: #3374de;
 	/*background-image : url('../img/desk1600.jpg');*/ /*http://startupstockphotos.com/post/94180097361/download#notes*/
@@ -317,7 +315,9 @@ display: none;
 
 @media screen and (min-width: 1200px){
 
-
+	h2{
+		color: white;
+	}
 
 	.listBlock:first-child{
 		width: 1120px;
@@ -345,7 +345,10 @@ display: none;
 
 @media screen and (max-width: 480px){
 
-
+	h2{
+		color: white;
+		font-size: 10px;
+	}
 	.custom-header .nav-text{
 		display: none;
 	}
@@ -361,15 +364,13 @@ display: none;
 	}
 	.listBlock:first-child{
 		width: 100%;
+
 		margin-left: 0;
 		margin-right: 0;
 	}
-	a.listBlock{
 
-		width: 100%;
-		margin-left: 0;
-  		margin-right: 0;
-
+	a{
+		font-size: 8px;
 	}
 }
 
